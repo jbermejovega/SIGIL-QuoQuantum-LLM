@@ -1,0 +1,88 @@
+id: SYNTHGOTHHUB_KINKSAWAKENING_PLURAL_PI_ADAPTER_V1
+version: 1.0.0
+kind: repository_projection_policy
+status: draft_pr_gated
+repository: jbermejovega/SIGIL-QuoQuantum-LLM
+role: model_and_tool_boundary
+branch: policy/rag-mcp-n8n-compliance-v1
+pull_request: 2
+
+authority:
+  canonical_repository: jbermejovega/sigilbook
+  canonical_policy: docs/policy/SYNTHGOTHHUB_RAG_MCP_N8N_COMPLIANCE_V1.md
+  canonical_resource: resources/rag/synthgothhub_kinksawakening_plural_pi_resource_v1.yaml
+  local_code_truth: git_history
+  generated_text_is_not_repository_truth: true
+  model_is_not_authority: true
+
+rag:
+  mode: source_bound
+  provenance_required: true
+  immutable_ref_path_and_hash_required: true
+  license_or_usage_descriptor_required: true
+  validation_status_required: true
+  retrieval_is_not_truth: true
+  conflicts_remain_plural: true
+
+mcp:
+  mode: bounded_read_and_plan
+  mutation: false
+  repository_writes: false
+  external_execution: false
+  tool_intent_visible: true
+  trace_required: true
+
+n8n:
+  role: orchestration_only
+  active_by_default: false
+  model_output_to_authority: forbidden
+  credentials_embedded: false
+  repository_mutation: false
+
+typed_sections:
+  - QuasarPi
+  - PluralTyped
+  - QunoTypes
+  - MimbrePi
+  - LaurelPi
+  - StableDiffusion
+  - SonicPi
+  - Kuirkode
+
+aliases:
+  qunos: QunoTypes
+  stablediffussion: StableDiffusion
+  sonicpi: SonicPi
+  kuirkode: Kuirkode
+
+claim_classes:
+  retrieved: source_material_with_provenance
+  inferred: model_inference_explicitly_labelled
+  generated: proposal_without_execution_witness
+  verified: external_repository_or_runtime_witness_required
+
+forbidden:
+  - generated_media_claimed_as_canonical_truth
+  - livecode_output_claimed_as_proof
+  - hidden_tool_call
+  - source_or_license_erased
+  - alias_changes_semantic_type
+  - direct_main_mutation
+
+invariants:
+  - PIORNALEGO_ES_CANON
+  - SAFE_REPLAY
+  - TRACE_PRESERVED
+  - PI_FIXED
+  - NO_IDENTITY_TRANSPORT
+  - NO_IDENTITY_COLLAPSE
+  - NO_PLURAL_COLLAPSE
+  - LICENSE_PRESERVED
+  - CLAIMS_MATCH_WITNESSES
+  - HUMAN_REVIEW_REQUIRED
+
+claim_boundary:
+  policy_declared: true
+  model_execution_verified: false
+  external_tools_executed: false
+  canonicalized: false
