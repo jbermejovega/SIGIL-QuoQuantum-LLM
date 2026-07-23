@@ -1,0 +1,7 @@
+id: PYDANTIKA_QUAZRIS8_GATE_SCHEMA_V1
+status: canonical_candidate
+validator: PYDANTIKA
+orchestrator: QUAZRIS8
+legacy_adapter: n8n
+model_boundary: true
+requires_external_witness_for_verified_claim: true
